@@ -29,6 +29,10 @@ def chem():
 def bio():
     return render_template('bio.html')
 
+@app.route("/bio_art_1")
+def bio_art_1():
+    return render_template('bio_art_1.html')
+
 @app.route("/download_file")
 def download_file():
     path = r"E:\Xtra 2\Xtra\Dev\Git\TutionWebsite1\output\test1.txt"
