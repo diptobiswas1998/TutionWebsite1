@@ -1,23 +1,28 @@
 .DEFAULT_GOAL=help
 
-set-up:
+req:
+	pip freeze > requirement.txt
+
+set-up: ## For initial set-up
 	pip install virtualenv
 	python -m virtualenv venv
 	.\venv\Scripts\activate
 	pip install -r .\requirement.txt
 
-run:
+run: ## To run the application
 	python main.py
 
-set-up-mac:
+req-mac:
+	pip3 freeze > requirement.txt
+
+set-up-mac: ## For initial set-up(for mac)
 	pip3 install virtualenv
 	python3 -m virtualenv venv
-	pip3 install -r .\requirement.txt
+	pip3 install -r requirement.txt
 
-run-mac:
+run-mac: ## To run the application(for mac)
 	venv/bin/activate
 	python3 main.py
 
 help:
-	@echo 1. "make set-up" for initial set-up
-	@echo 2. "make run" to run the application
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
