@@ -21,7 +21,6 @@ set-up-mac: ## For initial set-up(for mac)
 	pip3 install -r requirement.txt
 
 run-mac: ## To run the application(for mac)
-	venv/bin/activate
 	python3 main.py
 
 help:
