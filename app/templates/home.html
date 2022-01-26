@@ -15,14 +15,34 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
    crossorigin="anonymous"/>
+    <!-- Script for goole translater-->
+    <script type="text/javascript"
+         src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+    <link rel="stylesheet" href="home.css">
+
   <style>
-      .navbar {
+        .navbar {
           border-bottom: 1px solid lightgray;
           background-color: #fff;
-      }
-      .navigation-link a {
+        }
+        .navigation-link a {
           font-weight: 600;
-      }
+        }
+        .container-row {
+            margin: 3%;
+        }
+        .col-sm-8 {
+           border-right: 1px solid lightgray;
+        }
+        @media only screen and (max-width:556px) {
+            .col-sm-8 {
+                border-right:none;
+                margin: 0%;
+            }
+            .container-row {
+                margin: 0%;
+            }
+        }
   </style>
 </head>
 <body>
@@ -40,7 +60,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item navigation-link" >
-                <a class="nav-link" aria-current="page" href="#" style="color: #121212;">Home</a>
+                <a class="nav-link" aria-current="page" href="/home" style="color: #121212;">Home</a>
                 </li>
                 <li class="nav-item navigation-link">
                 <a class="nav-link" href="/classes" style="color: #121212;" style="font-weight:600;color: #121212; font-weight: 800;">Classes</a>
@@ -49,9 +69,10 @@
                 <a class="nav-link" href="/about" style="color: #121212;" style="color: #121212; font-weight: 500;">About Us</a>
                 </li>
                 <li class="nav-item navigation-link">
-                <a class="nav-link" href="/contact" style="color: #121212;" style="color: #121212; font-weight: 500;">Contact Us</a>
+                <a class="nav-link" href="/test" style="color: #121212;" style="color: #121212; font-weight: 500;">Contact Us</a>
                 </li>
             </ul>
+
             <!-- <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
@@ -65,46 +86,51 @@
     <main class="my-0 mt-5">
         <section>
             <div class="container-fluid">
-                <div class="row mx-5">
-                    <div class="col-md-8 bg-primary px-0">
-                        <div class="card" style=" border-color: rgba(0,0,0,.0); border-radius:0px; border: none;">
-                            <div class="card-body" style="border-bottom: 0.5px solid lightgray; border: none;">
-                                <h5 class="card-title ">Card title</h5>
+                <div class="row container-row">
+                    <div class="col-sm-8 px-0 main-col-8">
+                        <div class="card m-2 border-bottom">
+                            <div class="card-body">
+                                <h5 class="card-title">Article 1</h5>
                                 <h6 class="card-subtitle mb-2 py-1 text-muted">Card subtitle</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="card-link">Card link</a>
-                                <a href="#" class="card-link">Another link</a>
-                                <p><a href="First.pdf" download>Notes</a> Click on the link to download notes</p>
-                                <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
-                                <dl>
-                                    <dt>List 1</dt>
-                                    <dd>sjfkhs hsfkjhds fjs hisdfsdh ihfsdhf sdfhudhfsd fhiuhf sdiufhdsiu fsd</dd>
-                                    <dd>fkjsdfh hfdjsfh hfjshfj jhfhgfjhds jhfgjdsfg sfjgfjdsf kdjfh sdj</dd>
-                                </dl>
-
+                                <a href="#" class="text-center">Card link</a>
                             </div>
                         </div>
-                        <div class="card" style="border-bottom: 2px solid lightgray; border-color: rgba(0,0,0,.0); border-radius:0px;">
+                        <div class="card m-2">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                <h5 class="card-title">Article 2</h5>
+                                <h6 class="card-subtitle mb-2 py-1 text-muted">Card subtitle</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="card-link">Card link</a>
-                                <a href="#" class="card-link">Another link</a>
+                                <a href="#" class="text-center">Card link</a>
                             </div>
                         </div>
-                        <div class="card" style="border-bottom: 1px solid lightgray; border-color: rgba(0,0,0,.0); border-radius:0px;">
+                        <div class="card m-2">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                <h5 class="card-title">Article 3</h5>
+                                <h6 class="card-subtitle mb-2 py-1 text-muted">Card subtitle</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="card-link">Card link</a>
-                                <a href="#" class="card-link">Another link</a>
+                                <a href="#" class="text-center">Card link</a>
+                            </div>
+                        </div>
+                        <div class="card m-2">
+                            <div class="card-body">
+                                <h5 class="card-title">Article 4</h5>
+                                <h6 class="card-subtitle mb-2 py-1 text-muted">Card subtitle</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="text-center">Card link</a>
+                            </div>
+                        </div>
+                        <div class="card m-2">
+                            <div class="card-body">
+                                <h5 class="card-title">Article 5</h5>
+                                <h6 class="card-subtitle mb-2 py-1 text-muted">Card subtitle</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="text-center">Card link</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4  ">
-                        <h4>WHAT's NEW</h4>
+                    <div class="col-sm-4">
+                        <h4 class="text-center">WHAT's NEW</h4>
                         <div class="card" style=" border-radius:0px; box-shadow: rgba(1,49,34,.3);">
                             <div class="card-body">
                                 <div class="row">
@@ -125,12 +151,20 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div>
-                
+        <section class="footer">
+            <div class="mt-5 p-4 bg-dark text-white text-center">
+                <p>Footer</p>
             </div>
         </section>
     </main>
+    <script type="text/javascript"> 
+        function googleTranslateElementInit() { 
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'}, 
+                'google_translate_element'
+            ); 
+        } 
+    </script>
     
 </body>
 </html>
